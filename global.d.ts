@@ -7,7 +7,6 @@ declare namespace NodeJS {
         SESSION_SECRET_KEY: string
         EMAIL_SERVER: string
         EMAIL_FROM: string
-        POSTGRES_URI: string
         POSTGRES_URI_WITH_SCHEMA: string
         VERCEL_ENV: "production" | "preview" | "development"
         VERCEL_URL: string

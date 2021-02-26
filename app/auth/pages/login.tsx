@@ -2,7 +2,7 @@ import { LoginForm } from "app/auth/components/LoginForm"
 import { Box } from "app/core/components/Box"
 import { IconButtonLink } from "app/core/components/Button"
 import { Heading } from "app/core/components/Heading"
-import { IconDropbox, IconFacebook, IconGoogle, IconTwitter } from "app/core/components/Icons"
+import { IconDropbox, IconGoogle, IconTwitter } from "app/core/components/Icons"
 import { Center, HStack, Stack, VStack } from "app/core/components/Orientation"
 import { Text } from "app/core/components/Text"
 import { useCurrentUser } from "app/core/hooks/useCurrentUser"
@@ -81,11 +81,6 @@ const LoginPage: BlitzPage = () => {
                                     aria-label={t("login.sso", { provider: "Google" }) as string}
                                     href={constants.routes.googleAuth}
                                     icon={<IconGoogle />}
-                                />
-                                <IconButtonLink
-                                    aria-label={t("login.sso", { provider: "Facebook" }) as string}
-                                    href={constants.routes.facebookAuth}
-                                    icon={<IconFacebook />}
                                 />
                                 <IconButtonLink
                                     aria-label={t("login.sso", { provider: "Dropbox" }) as string}
