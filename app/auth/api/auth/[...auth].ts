@@ -1,9 +1,8 @@
 import { passportAuth } from "blitz"
 import dropboxLogin from "integrations/dropboxLogin"
-//import facebookLogin from "integrations/facebookLogin"
 //import googleLogin from "integrations/googleLogin"
 import magicLogin from "integrations/magicLogin"
-//import twitterLogin from "integrations/twitterLogin"
+import twitterLogin from "integrations/twitterLogin"
 
 export default passportAuth({
     successRedirectUrl: "/dashboard",
@@ -13,10 +12,10 @@ export default passportAuth({
         {
             strategy: magicLogin,
         },
-        /*{
+        {
             strategy: twitterLogin,
         },
-        {
+        /*{
             strategy: googleLogin,
             authenticateOptions: {
                 scope: [
@@ -24,9 +23,6 @@ export default passportAuth({
                     "https://www.googleapis.com/auth/userinfo.profile",
                 ],
             },
-        },
-        {
-            strategy: facebookLogin,
         },*/
         {
             strategy: dropboxLogin,
