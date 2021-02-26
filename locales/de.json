@@ -1,0 +1,51 @@
+{
+    "buttons": {
+        "colorMode": "Farbmodus umschalten",
+        "language": "Sprache wechseln",
+        "login": "Anmelden",
+        "logout": "Abmelden",
+        "navigation": "Navigation ausklappen",
+        "resetPassword": "Passwort zurücksetzen",
+        "retrievePassword": "Passwort vergessen",
+        "submitResetPassword": "Passwort ändern"
+    },
+    "dashboard": {
+        "greet": "Tu <important>wichtige Dinge</important>"
+    },
+    "errors": {
+        "unexpected": "Etwas unerwartetes ist passiert."
+    },
+    "fieldLabels": {
+        "email": "E-Mail Adresse",
+        "newPassword": "Neues Passwort",
+        "newPasswordConfirm": "Neues Passwort wiederholen",
+        "password": "Passwort"
+    },
+    "footer": "Im Internet hergestellt von",
+    "forgotPassword": {
+        "description": "Kein Problem, wir helfen dir dabei!",
+        "success": "Wenn Ihre E-Mail in unserem System ist, erhalten Sie in Kürze Anweisungen zum Zurücksetzen Ihres Passworts.",
+        "title": "Sie wollen ihr Passwort zurücksetzen?"
+    },
+    "home": {
+        "greet": "Teile Stadtrundgänge mit deinen <important>Freunden</important>",
+        "slug": "tolle Unterzeile"
+    },
+    "login": {
+        "already": "Bereits eingeloggt.",
+        "description": "Wir bauen diese Plattform kontinuierlich aus! Werfen Sie einen Blick auf unsere neuesten Funktionen!",
+        "errors": {
+            "invalid": "Diese Login-Daten sind falsch."
+        },
+        "greet": "Schön, dass du wieder da bist! Tolle Stadtrundgänge warten auf <important>dich!</important>",
+        "heading": "Willkommen zurück!",
+        "sso": "Mit {provider} anmelden",
+        "ssoOr": "ODER",
+        "title": "Anmeldung"
+    },
+    "resetPassword": {
+        "description": "Bitte ändere hier dein Passwort",
+        "success": "Passwort erfolgreich geändert",
+        "title": "Neues Passwort setzen"
+    }
+}

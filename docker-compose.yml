@@ -1,0 +1,17 @@
+version: "3.7"
+
+services:
+    postgres:
+        restart: always
+        image: postgres
+        container_name: "postgres_container"
+        ports:
+            - "5432:5432"
+        environment:
+            POSTGRES_USER: finaluser
+            POSTGRES_PASSWORD: finalpassword
+            POSTGRES_DB: finalfinal
+        volumes:
+            - pgvol:/var/lib/postgresql/data
+volumes:
+    pgvol:

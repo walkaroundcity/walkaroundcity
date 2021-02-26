@@ -1,0 +1,65 @@
+module.exports = {
+    env: {
+        es2020: true,
+    },
+    extends: ["react-app", "plugin:jsx-a11y/recommended"],
+    plugins: ["jsx-a11y", "simple-import-sort"],
+    rules: {
+        "import/no-anonymous-default-export": "error",
+        "import/no-webpack-loader-syntax": "off",
+        "react/react-in-jsx-scope": "off", // React is always in scope with Blitz
+        "jsx-a11y/anchor-is-valid": "off", //Doesn't play well with Blitz/Next <Link> usage
+        "simple-import-sort/imports": "error",
+        "simple-import-sort/exports": "error",
+        "no-restricted-imports": [
+            "error",
+            {
+                patterns: ["react-icons/*"],
+                paths: [
+                    "next/link",
+                    {
+                        name: "blitz",
+                        importNames: ["Link", "LinkProps"],
+                    },
+                    {
+                        name: "@chakra-ui/react",
+                        importNames: [
+                            "Alerts",
+                            "AlertProps",
+                            "Box",
+                            "BoxProps",
+                            "Button",
+                            "ButtonProps",
+                            "Code",
+                            "CodeProps",
+                            "Container",
+                            "ContainerProps",
+                            "FormControl",
+                            "FormLabel",
+                            "FormErrorMessage",
+                            "FormHelperText",
+                            "Heading",
+                            "HeadingProps",
+                            "Icon",
+                            "IconProps",
+                            "IconButton",
+                            "IconButtonProps",
+                            "Input",
+                            "InputProps",
+                            "Link",
+                            "LinkProps",
+                            "Stack",
+                            "StackProps",
+                            "HStack",
+                            "VStack",
+                            "StackDivider",
+                            "StackDividerProps",
+                            "Text",
+                            "TextProps",
+                        ],
+                    },
+                ],
+            },
+        ],
+    },
+}

@@ -1,0 +1,49 @@
+{
+    "buttons": {
+        "colorMode": "Toggle dark mode",
+        "language": "Toggle language",
+        "login": "Login",
+        "logout": "Logout",
+        "navigation": "Toggle navigation",
+        "submitResetPassword": "Change password"
+    },
+    "dashboard": {
+        "greet": "Do <important>important stuff</important>"
+    },
+    "errors": {
+        "unexpected": "Something unexpected happened."
+    },
+    "fieldLabels": {
+        "email": "Email",
+        "newPassword": "New password",
+        "newPasswordConfirm": "Confirm new password",
+        "password": "Password"
+    },
+    "footer": "Made on the internets by",
+    "forgotPassword": {
+        "description": "No problem, we'll help you with that!",
+        "success": "If your email is in our system, you will receive instructions to reset your  password shortly.",
+        "title": "You want to reset your password?"
+    },
+    "home": {
+        "greet": "Share city walks with <important>your audience</important>",
+        "slug": "lalalala"
+    },
+    "login": {
+        "already": "Already logged in.",
+        "description": "We're continuously extending this platform! Take a look at our newest features!",
+        "errors": {
+            "invalid": "Those credentials are invalid."
+        },
+        "greet": "Nice to have you back! Great photos are waiting for <important>you!</important>",
+        "heading": "Welcome back!",
+        "sso": "Sign in with {provider}",
+        "ssoOr": "OR",
+        "title": "Login"
+    },
+    "resetPassword": {
+        "description": "Please enter your new password here",
+        "success": "Password Reset Successfully",
+        "title": "Set a new password"
+    }
+}

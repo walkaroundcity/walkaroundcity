@@ -1,0 +1,35 @@
+test:
+  - "**/*.test.ts"
+  - "**/*.test.tsx"
+
+utils:
+  - "utils/**/*"
+
+db:
+  - "db/**/*"
+  - "app/**/mutations/**/*"
+  - "app/**/queries/**/*"
+
+infra:
+  - ".github/**/*"
+  - "./*"
+  - ".vscode/**/*"
+
+auth:
+  - "app/auth/**/*"
+
+components:
+  - "app/components/**/*"
+
+hooks:
+  - "app/hooks/**/*"
+
+layouts:
+  - "app/layouts/**/*"
+
+pages:
+  - "app/pages/**/*"
+
+dependencies:
+  - "yarn.lock"
+  - "package-lock.json"

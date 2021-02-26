@@ -1,0 +1,133 @@
+{
+    "name": "walkaroundcity",
+    "version": "1.0.0",
+    "private": true,
+    "scripts": {
+        "build": "blitz build",
+        "build:storybook": "build-storybook --quiet",
+        "db:migrate:deploy": "prisma migrate deploy --preview-feature",
+        "db:migrate:dev": "prisma migrate dev --preview-feature",
+        "db:seed": "blitz db seed",
+        "db:studio": "blitz prisma studio",
+        "dev": "blitz dev",
+        "dev:db:down": "docker-compose down --remove-orphans",
+        "dev:db:up": "docker-compose up -d",
+        "dev:prepare": "vercel env pull && yarn",
+        "dev:storybook": "start-storybook -p 6006",
+        "lint": "eslint --ignore-path .gitignore --ext .js,.ts,.tsx .",
+        "postinstall": "prisma generate",
+        "postvercel-build": "yarn db:migrate:deploy && yarn db:seed",
+        "start": "blitz start",
+        "test": "jest",
+        "test:watch": "jest --watch",
+        "vercel-build": "yarn build"
+    },
+    "lint-staged": {
+        "*.{js,ts,tsx}": [
+            "eslint --fix"
+        ],
+        "*.{json,rc}": [
+            "jsonsort -a"
+        ]
+    },
+    "prettier": {
+        "printWidth": 100,
+        "semi": false
+    },
+    "dependencies": {
+        "@chakra-ui/react": "1.3.3",
+        "@emotion/is-prop-valid": "1.1.0",
+        "@emotion/react": "11.1.5",
+        "@emotion/styled": "11.1.5",
+        "@prisma/client": "2.17.0",
+        "blitz": "0.30.5",
+        "final-form": "4.20.1",
+        "framer-motion": "3.7.0",
+        "next-intl": "1.3.3",
+        "nodemailer": "6.5.0",
+        "passport-adobe-oauth2": "1.0.1",
+        "passport-dropbox-oauth2": "1.1.0",
+        "passport-facebook": "3.0.0",
+        "passport-github": "1.1.0",
+        "passport-google-oauth": "2.0.0",
+        "passport-magic-login": "1.0.7",
+        "passport-microsoft": "0.1.0",
+        "passport-twitter": "1.0.4",
+        "prisma": "~2.17",
+        "react": "0.0.0-experimental-3310209d0",
+        "react-dom": "0.0.0-experimental-3310209d0",
+        "react-error-boundary": "3.1.0",
+        "react-final-form": "6.5.2",
+        "react-icons": "4.2.0",
+        "typescript": "4.2.2",
+        "zod": "1.11.11"
+    },
+    "devDependencies": {
+        "@commitlint/cli": "12.0.0",
+        "@commitlint/config-conventional": "12.0.0",
+        "@storybook/addon-a11y": "6.1.20",
+        "@storybook/addon-actions": "6.1.20",
+        "@storybook/addon-knobs": "6.1.20",
+        "@storybook/addon-toolbars": "6.1.20",
+        "@storybook/cli": "6.1.20",
+        "@storybook/react": "6.1.20",
+        "@types/nodemailer": "6.4.0",
+        "@types/passport-facebook": "2.1.10",
+        "@types/passport-github": "1.1.5",
+        "@types/passport-google-oauth": "1.0.41",
+        "@types/passport-microsoft": "0.0.0",
+        "@types/passport-twitter": "1.0.36",
+        "@types/preview-email": "2.0.0",
+        "@types/react": "17.0.2",
+        "branch-name-lint": "2.0.0",
+        "eslint": "7.20.0",
+        "eslint-plugin-simple-import-sort": "7.0.0",
+        "husky": "5",
+        "json-sort-cli": "1.18.5",
+        "lint-staged": "10.5.4",
+        "npm-run-all": "4.1.5",
+        "prettier": "2.2.1",
+        "prettier-plugin-prisma": "0.4.0",
+        "pretty-quick": "3.1.0",
+        "preview-email": "3.0.3",
+        "storybook-addon-performance": "0.14.0",
+        "vercel": "21.3.0",
+        "yarnhook": "0.5.1"
+    },
+    "branchNameLinter": {
+        "banned": [
+            "wip"
+        ],
+        "disallowed": [
+            "dev",
+            "develop",
+            "main",
+            "master",
+            "staging"
+        ],
+        "msgBranchBanned": "Branches with the name \"%s\" are not allowed. Rename: `git branch -m <new_name>`.",
+        "msgBranchDisallowed": "Pushing to \"%s\" is not allowed. Create a PR towards 'main'.",
+        "msgPrefixNotAllowed": "Branch prefix \"%s\" is not allowed. Rename: `git branch -m <new_name>`.",
+        "msgPrefixSuggestion": "Instead of \"%s\" try \"%s\". Rename: `git branch -m <new_name>`.",
+        "msgSeparatorRequired": "Branch \"%s\" must contain a separator \"%s\". Rename: `git branch -m <new_name>`.",
+        "prefixes": [
+            "chore",
+            "dependabot",
+            "feat",
+            "fix"
+        ],
+        "separator": "/",
+        "skip": [],
+        "suggestions": {
+            "bugfix": "fix",
+            "ci": "chore",
+            "feature": "feat",
+            "features": "feat",
+            "hotfix": "fix",
+            "releases": "chore"
+        }
+    },
+    "prisma": {
+        "schema": "db/schema.prisma"
+    }
+}

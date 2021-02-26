@@ -1,0 +1,14 @@
+tasks:
+    - command: sudo docker-up
+    - init: yarn install
+      command: yarn run dev
+
+vscode:
+    extensions:
+        - dbaeumer.vscode-eslint@2.1.8:02aHhbJ0Q4aGdjHXlTdVKg==
+        - esbenp.prettier-vscode@5.8.0:cd2Jz796EPVnD5zeCyctPw==
+        - lokalise.i18n-ally@2.4.20:cmcGkEqWU9OCdNXVe1XBvg==
+        - orta.vscode-jest@4.0.0-alpha.1:TuNngpN2TTsC/Ck1qhIwrg==
+        - prisma.prisma@2.16.0:gVV0uFvf37RzOogC4msDhA==
+        - streetsidesoftware.code-spell-checker@1.10.2:IKNWSiKNhoiWZ0g+IVw/mA==
+        - streetsidesoftware.code-spell-checker-german@0.1.8:nRq8d89HHYN5UY9r6KrjSw==

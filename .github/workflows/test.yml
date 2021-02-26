@@ -1,0 +1,41 @@
+name: run tests
+
+on:
+    pull_request:
+    push:
+        branches:
+            - main
+
+jobs:
+    gate:
+        runs-on: ubuntu-latest
+
+        steps:
+            - uses: actions/checkout@master
+
+            - run: echo "NVMRC=$(cat .nvmrc)" >> $GITHUB_ENV
+
+            - name: setup node
+              uses: actions/setup-node@v2
+              with:
+                  node-version: ${{ env.NVMRC }}
+
+            - run: echo "YARN_CACHE_DIR=(yarn cache dir)" >> $GITHUB_ENV
+
+            - name: init yarn cache
+              uses: actions/cache@v2.1.4
+              id: yarn-cache
+              with:
+                  path: ${{ env.YARN_CACHE_DIR }}
+                  key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
+                  restore-keys: |
+                      ${{ runner.os }}-yarn-
+
+            - name: yarn install
+              run: yarn
+
+            - name: lint
+              run: yarn lint
+
+            - name: unit_tests
+              run: yarn test

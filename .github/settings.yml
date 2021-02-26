@@ -1,0 +1,47 @@
+repository:
+    name: walkaroundcity
+    description: create your own city tour
+    homepage: https://walkaround.city
+    topics: walking tour, city ​​tour
+    private: true
+    has_issues: true
+    has_projects: true
+    has_wiki: false
+    has_downloads: false
+    default_branch: main
+    allow_squash_merge: true
+    allow_merge_commit: false
+    allow_rebase_merge: false
+
+labels:
+    - name: bug
+      color: "#db7b55"
+      description: An issue with the system 🐛.
+    - name: feat
+      color: "#458588"
+      description: New functionality.
+    - name: infra
+      color: "#282828"
+      description: changes to ci/cd, ide or tooling
+    - name: test
+      color: "#fabd2f"
+      description: changes to tests
+    - name: dependencies
+      color: "#336699"
+      description: updates/adds dependencies
+    - name: utils
+      color: "#83c07c"
+    - name: db
+    - name: auth
+    - name: components
+    - name: hooks
+    - name: layouts
+    - name: pages
+
+branches:
+    - name: main
+      protection:
+          required_status_checks:
+              strict: true
+              contexts: [gate]
+          enforce_admins: true
