@@ -63,7 +63,7 @@ export const HeaderBar = ({ showBorder = true }: HeaderBarProps) => {
                     >
                         <IconLogo />
                         <Heading as={"h1"} fontSize={{ base: "sm", md: "xl" }}>
-                            <TextUnderline>finalfinal</TextUnderline>.photos
+                            <TextUnderline>walkaround</TextUnderline>.city
                         </Heading>
                     </Stack>
                 </Link>
