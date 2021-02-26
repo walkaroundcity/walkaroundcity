@@ -1,9 +1,9 @@
 import { passportAuth } from "blitz"
 import dropboxLogin from "integrations/dropboxLogin"
-//import facebookLogin from "integrations/facebookLogin"
-//import googleLogin from "integrations/googleLogin"
+import facebookLogin from "integrations/facebookLogin"
+import googleLogin from "integrations/googleLogin"
 import magicLogin from "integrations/magicLogin"
-//import twitterLogin from "integrations/twitterLogin"
+import twitterLogin from "integrations/twitterLogin"
 
 export default passportAuth({
     successRedirectUrl: "/dashboard",
@@ -13,7 +13,7 @@ export default passportAuth({
         {
             strategy: magicLogin,
         },
-        /*{
+        {
             strategy: twitterLogin,
         },
         {
@@ -27,7 +27,7 @@ export default passportAuth({
         },
         {
             strategy: facebookLogin,
-        },*/
+        },
         {
             strategy: dropboxLogin,
         },

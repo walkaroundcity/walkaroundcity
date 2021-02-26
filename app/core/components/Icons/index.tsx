@@ -9,17 +9,14 @@ import {
     IoLogIn,
     IoLogoDropbox,
     IoLogoFacebook,
-    IoLogoGithub,
     IoLogoGoogle,
     IoLogoTwitter,
     IoLogOut,
-    IoLogoWindows,
     IoMenu,
     IoMoon,
     IoSunny,
 } from "react-icons/io5"
 import { IconType } from "react-icons/lib"
-import { SiAdobe } from "react-icons/si"
 
 /**
  * this file is meant as an adapter to curate the icons we want from the react icons pkg
@@ -46,7 +43,4 @@ export const IconBurger = (props: IconProps) => <AsIcon icon={GiHamburger} {...p
 export const IconTwitter = (props: IconProps) => <AsIcon icon={IoLogoTwitter} {...props} />
 export const IconGoogle = (props: IconProps) => <AsIcon icon={IoLogoGoogle} {...props} />
 export const IconFacebook = (props: IconProps) => <AsIcon icon={IoLogoFacebook} {...props} />
-export const IconMicrosoft = (props: IconProps) => <AsIcon icon={IoLogoWindows} {...props} />
 export const IconDropbox = (props: IconProps) => <AsIcon icon={IoLogoDropbox} {...props} />
-export const IconAdobe = (props: IconProps) => <AsIcon icon={SiAdobe} {...props} />
-export const IconGithub = (props: IconProps) => <AsIcon icon={IoLogoGithub} {...props} />
