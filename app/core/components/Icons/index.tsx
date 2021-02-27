@@ -7,7 +7,6 @@ import {
     IoCamera,
     IoKey,
     IoLogIn,
-    IoLogoDropbox,
     IoLogoGoogle,
     IoLogoTwitter,
     IoLogOut,
@@ -41,4 +40,3 @@ export const IconBeer = (props: IconProps) => <AsIcon icon={GiBeerStein} {...pro
 export const IconBurger = (props: IconProps) => <AsIcon icon={GiHamburger} {...props} />
 export const IconTwitter = (props: IconProps) => <AsIcon icon={IoLogoTwitter} {...props} />
 export const IconGoogle = (props: IconProps) => <AsIcon icon={IoLogoGoogle} {...props} />
-export const IconDropbox = (props: IconProps) => <AsIcon icon={IoLogoDropbox} {...props} />

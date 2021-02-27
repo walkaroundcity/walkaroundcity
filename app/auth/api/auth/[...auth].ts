@@ -1,5 +1,4 @@
 import { passportAuth } from "blitz"
-import dropboxLogin from "integrations/dropboxLogin"
 //import googleLogin from "integrations/googleLogin"
 import magicLogin from "integrations/magicLogin"
 import twitterLogin from "integrations/twitterLogin"
@@ -10,6 +9,7 @@ export default passportAuth({
     secureProxy: process.env.VERCEL_ENV !== "development",
     strategies: [
         {
+            // @ts-ignore
             strategy: magicLogin,
         },
         {
@@ -24,8 +24,5 @@ export default passportAuth({
                 ],
             },
         },*/
-        {
-            strategy: dropboxLogin,
-        },
     ],
 })
