@@ -8,7 +8,7 @@ import { IconAlert } from "./Icons"
 import { Stack } from "./Orientation"
 export { FORM_ERROR } from "final-form"
 
-type FormProps<S extends z.ZodType<any, any>> = {
+export type FormProps<S extends z.ZodType<any, any>> = {
     /** All your form fields */
     children: ReactNode
     /** Text to display in the submit button */

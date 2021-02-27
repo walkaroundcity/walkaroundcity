@@ -11,23 +11,22 @@ generator client {
 }
 
 // --------------------------------------
-
 model User {
-  id                Int       @default(autoincrement()) @id
-  createdAt         DateTime  @default(now())
-  updatedAt         DateTime  @updatedAt
-  name              String?
-  profile_picture   String?
-  email             String    @unique
-  hashedPassword    String?
-  role              String    @default("user")
+  id              Int      @id @default(autoincrement())
+  createdAt       DateTime @default(now())
+  updatedAt       DateTime @updatedAt
+  name            String?
+  profile_picture String?
+  email           String   @unique
+  role            Role     @default(USER)
 
-  tokens            Token[]
-  sessions          Session[]
+  tokens   Token[]
+  sessions Session[]
+  Walk     Walk[]
 }
 
 model Session {
-  id                 Int       @default(autoincrement()) @id
+  id                 Int       @id @default(autoincrement())
   createdAt          DateTime  @default(now())
   updatedAt          DateTime  @updatedAt
   expiresAt          DateTime?
@@ -37,12 +36,12 @@ model Session {
   publicData         String?
   privateData        String?
 
-  user               User?     @relation(fields: [userId], references: [id])
-  userId             Int?
+  user   User? @relation(fields: [userId], references: [id])
+  userId Int?
 }
 
 model Token {
-  id          Int       @default(autoincrement()) @id
+  id          Int       @id @default(autoincrement())
   createdAt   DateTime  @default(now())
   updatedAt   DateTime  @updatedAt
   hashedToken String
@@ -58,4 +57,57 @@ model Token {
 
 enum TokenType {
   RESET_PASSWORD
+}
+
+model Walk {
+  id          Int      @id @default(autoincrement())
+  creator     User     @relation(fields: [userId], references: [id])
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+  shortname   String
+  title       String
+  picture     String?
+  description String?
+  upvotes     Int      @default(0)
+  downvotes   Int      @default(0)
+  list_public Boolean  @default(false)
+  tags        Tag[]    @relation("walk_tags")
+  visitors    Int      @default(0)
+  stops       Stop[]
+  userId      Int
+
+  @@unique([userId, id])
+}
+
+model Tag {
+  id        Int      @id @default(autoincrement())
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  name      String
+  Walk      Walk?    @relation("walk_tags", fields: [walkId], references: [id])
+  walkId    Int?
+  Stop      Stop?    @relation("stop_tags", fields: [stopId], references: [id])
+  stopId    Int?
+}
+
+model Stop {
+  id          Int      @id @default(autoincrement())
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+  Walk        Walk?    @relation(fields: [walkId], references: [id])
+  walkId      Int?
+  description String?
+  upvotes     Int      @default(0)
+  downvotes   Int      @default(0)
+  visitors    Int      @default(0)
+  sequence    Int      @default(autoincrement())
+  tags        Tag[]    @relation("stop_tags")
+  title       String
+
+  @@unique([id, sequence])
+}
+
+enum Role {
+  USER
+  ADMIN
 }

@@ -40,7 +40,7 @@ const magicLogin = new MagicLoginStrategy({
     async verify(payload, verifyCallback) {
         const user = await db.user.upsert({
             where: { email: payload.destination },
-            create: { email: payload.destination, role: "user" },
+            create: { email: payload.destination, role: "USER" },
             update: { email: payload.destination },
         })
         const publicData = {

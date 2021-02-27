@@ -1,0 +1,25 @@
+import { paginate, resolver } from "blitz"
+import db, { Prisma } from "db"
+
+interface GetWalksInput
+    extends Pick<Prisma.WalkFindManyArgs, "where" | "orderBy" | "skip" | "take"> {}
+
+export default resolver.pipe(
+    resolver.authorize(),
+    async ({ where, orderBy, skip = 0, take = 100 }: GetWalksInput) => {
+        // TODO: in multi-tenant app, you must add validation to ensure correct tenant
+        const { items: walks, hasMore, nextPage, count } = await paginate({
+            skip,
+            take,
+            count: () => db.walk.count({ where }),
+            query: (paginateArgs) => db.walk.findMany({ ...paginateArgs, where, orderBy }),
+        })
+
+        return {
+            walks,
+            nextPage,
+            hasMore,
+            count,
+        }
+    }
+)

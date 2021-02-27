@@ -1,18 +1,19 @@
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
-import db from "./index"
+import { createFakeStops, createFakeUsers, createFakeWalks } from "utils/fake"
+
+require("dotenv-flow").config({ silent: true })
 
 /*
  * This seed function is executed when you run `blitz db seed`.
- *
- * Probably you want to use a library like https://chancejs.com
- * or https://github.com/Marak/Faker.js to easily generate
- * realistic data.
  */
 const seed = async () => {
-    if (process.env.VERCEL_ENV === "preview") {
-        // for (let i = 0; i < 5; i++) {
-        //   await db.project.create({ data: { name: "Project " + i } })
-        // }
+    if (["preview", "development"].includes(process.env.VERCEL_ENV as string)) {
+        const users = await createFakeUsers(5)
+        await Promise.all(
+            users.map(async (user) => {
+                const walks = await createFakeWalks(user.id, 5)
+                return Promise.all(walks.map((walk) => createFakeStops(walk.id, 5)))
+            })
+        )
     }
 }
 
