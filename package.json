@@ -80,7 +80,7 @@
         "@types/preview-email": "2.0.0",
         "@types/react": "17.0.2",
         "branch-name-lint": "2.0.0",
-        "eslint": "7.20.0",
+        "eslint": "7.21.0",
         "eslint-plugin-simple-import-sort": "7.0.0",
         "husky": "5",
         "json-sort-cli": "1.18.5",
