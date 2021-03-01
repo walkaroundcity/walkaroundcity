@@ -4760,20 +4760,20 @@ assign-symbols@^1.0.0:
   resolved "https://registry.yarnpkg.com/assign-symbols/-/assign-symbols-1.0.0.tgz#59667f41fadd4f20ccbc2bb96b8d4f7f78ec0367"
   integrity sha1-WWZ/QfrdTyDMvCu5a41Pf3jsA2c=
 
-ast-monkey-traverse@^2.0.5:
-  version "2.0.5"
-  resolved "https://registry.yarnpkg.com/ast-monkey-traverse/-/ast-monkey-traverse-2.0.5.tgz#ce8c3e17ccfc9442822b2f20e6859eae1abb37e5"
-  integrity sha512-XgKIzXPmAFs4JdGuzWf1iRe7TN9GtP6pn1iCy3vT9+hJOr365DC8MI1/6KJMKmrlVzJdaYfPoeXZvW6ZeJLRXg==
+ast-monkey-traverse@^2.0.6:
+  version "2.0.6"
+  resolved "https://registry.yarnpkg.com/ast-monkey-traverse/-/ast-monkey-traverse-2.0.6.tgz#5686247d40e8e5861d3e4a8365a276002c530a62"
+  integrity sha512-d9ZcD+NXplQ2iLtfy49qyVPY2I0FocmHF0ZGR3DGhhGrnWZP3BCKHzJJg+4yg2Qw5sQhoXynIhYq4nk3R0Fz2w==
   dependencies:
     "@babel/runtime" "^7.12.13"
-    ast-monkey-util "^1.3.5"
+    ast-monkey-util "^1.3.6"
     lodash.clonedeep "^4.5.0"
     lodash.isplainobject "^4.0.6"
 
-ast-monkey-util@^1.3.5:
-  version "1.3.5"
-  resolved "https://registry.yarnpkg.com/ast-monkey-util/-/ast-monkey-util-1.3.5.tgz#ccebc127d644a69301f0320c5917f52a924bd478"
-  integrity sha512-5qKVf0mE+gK0VZdtE7jBK9ruG3SMuZ51+jYORIZ/QdO3q4EOgTghmOqEiCLc8g7Why2zmVykZ75Qt5B5eQlKvw==
+ast-monkey-util@^1.3.6:
+  version "1.3.6"
+  resolved "https://registry.yarnpkg.com/ast-monkey-util/-/ast-monkey-util-1.3.6.tgz#67c65a7b6f508a5dc095f079bad5b369c87e962f"
+  integrity sha512-9O/+6kUwAt+s9ed8HUiwm56LfM2r6TEHe+6CLp58lthg67/lHFjs0HbEZOHr+CCdMcrxvC8NREuEWOIRR/C+vg==
   dependencies:
     "@babel/runtime" "^7.12.13"
 
@@ -11109,12 +11109,12 @@ json-schema@0.2.3:
   resolved "https://registry.yarnpkg.com/json-schema/-/json-schema-0.2.3.tgz#b480c892e59a2f05954ce727bd3f2a4e882f9e13"
   integrity sha1-tIDIkuWaLwWVTOcnvT8qTogvnhM=
 
-json-sort-cli@1.18.5:
-  version "1.18.5"
-  resolved "https://registry.yarnpkg.com/json-sort-cli/-/json-sort-cli-1.18.5.tgz#4d68c2614c7326ca725ffeedaf4aacc989fa12b4"
-  integrity sha512-MeFb6188zz1wiQ/wuD9G1wgv0wV45OJsO9HIxYri2v1pkNxwszphw+d/UcSkqaKNrwpXaR9BvOA1+9HpQMLZPw==
+json-sort-cli@1.18.6:
+  version "1.18.6"
+  resolved "https://registry.yarnpkg.com/json-sort-cli/-/json-sort-cli-1.18.6.tgz#971ea4331229709030b1094bea0a6520545e57e8"
+  integrity sha512-O1HotyVS1kzbNkUY0MOvIRr2d5noRRNSuJiZRV3kjldXQMHsURFsEuouKLr4SyPUto6YPdeTmQYxRgFUQyxqOw==
   dependencies:
-    ast-monkey-traverse "^2.0.5"
+    ast-monkey-traverse "^2.0.6"
     chalk "^4.1.0"
     fs-extra "^9.1.0"
     globby "^11.0.2"
