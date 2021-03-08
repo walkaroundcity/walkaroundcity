@@ -70,7 +70,7 @@
         "@storybook/addon-knobs": "6.1.20",
         "@storybook/addon-toolbars": "6.1.20",
         "@storybook/cli": "6.1.20",
-        "@storybook/react": "6.1.20",
+        "@storybook/react": "6.1.21",
         "@types/nodemailer": "6.4.0",
         "@types/passport-facebook": "2.1.10",
         "@types/passport-github": "1.1.5",
