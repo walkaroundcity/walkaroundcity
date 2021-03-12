@@ -37,5 +37,9 @@ jobs:
             - name: lint
               run: yarn lint
 
-            - name: unit_tests
-              run: yarn test
+            - name: test with coverage
+              uses: paambaati/codeclimate-action@v2.7.5
+              env:
+                  CC_TEST_REPORTER_ID: ${{ secrets.CODE_CLIMATE }}
+              with:
+                  coverageCommand: yarn test:coverage

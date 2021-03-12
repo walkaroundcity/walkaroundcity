@@ -14,7 +14,8 @@ export default resolver.pipe(
     resolver.zod(UpdateWalk),
     resolver.authorize(),
     async ({ id, ...data }, ctx) => {
-        // TODO: in multi-tenant app, you must add validation to ensure correct tenant
+        if (!ctx.session.userId) return null
+
         const walk = await db.walk.update({
             where: { userId_id: { id, userId: ctx.session.userId } },
             data,

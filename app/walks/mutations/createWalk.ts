@@ -10,6 +10,8 @@ const CreateWalk = z
     .nonstrict()
 
 export default resolver.pipe(resolver.zod(CreateWalk), resolver.authorize(), async (input, ctx) => {
+    if (!ctx.session.userId) return null
+
     const walk = await db.walk.create({ data: { ...input, userId: ctx.session.userId } })
 
     return walk

@@ -1,5 +1,5 @@
-import { SimpleRolesIsAuthorized } from "@blitzjs/server"
 import { User } from "@prisma/client"
+import { SimpleRolesIsAuthorized } from "blitz"
 import { DefaultCtx, SessionContext } from "blitz"
 
 declare module "*.module.scss" {

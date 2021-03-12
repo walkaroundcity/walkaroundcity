@@ -56,3 +56,6 @@ lib-cov
 
 # storybook
 storybook-static
+
+# jest
+./coverage

@@ -12,7 +12,8 @@ export default resolver.pipe(
     resolver.zod(DeleteWalk),
     resolver.authorize(),
     async ({ id }, ctx) => {
-        // TODO: in multi-tenant app, you must add validation to ensure correct tenant
+        if (!ctx.session.userId) return null
+
         const walk = await db.walk.deleteMany({ where: { id, userId: ctx.session.userId } })
 
         return walk
