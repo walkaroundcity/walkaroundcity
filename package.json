@@ -68,7 +68,7 @@
         "@storybook/addon-a11y": "6.1.21",
         "@storybook/addon-actions": "6.1.20",
         "@storybook/addon-knobs": "6.1.21",
-        "@storybook/addon-toolbars": "6.1.20",
+        "@storybook/addon-toolbars": "6.1.21",
         "@storybook/cli": "6.1.21",
         "@storybook/react": "6.1.21",
         "@types/nodemailer": "6.4.0",
