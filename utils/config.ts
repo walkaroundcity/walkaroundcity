@@ -16,7 +16,7 @@ export const constants = {
     },
 }
 
-export const getBaseUrl = () => {
+export const getBaseUrl = (): string => {
     if (process.env.VERCEL_ENV === "production") return constants.baseUrl
-    return process.env.VERCEL_URL || process.env.BLITZ_DEV_SERVER_ORIGIN
+    return process.env.VERCEL_URL || process.env.BLITZ_DEV_SERVER_ORIGIN || constants.baseUrl
 }

@@ -27,5 +27,7 @@
     "i18n-ally.enabledFrameworks": ["i18next", "react"],
     "i18n-ally.keystyle": "nested",
     "i18n-ally.localesPaths": ["locales"],
-    "i18n-ally.namespace": false
+    "i18n-ally.namespace": false,
+    "ponicode.testSettings.testLocation.locationType": "Same folder as source file",
+    "ponicode.testSettings.testLocation.path": "{rootDir}/{filePath}/{fileName}.test.{ext}"
 }
